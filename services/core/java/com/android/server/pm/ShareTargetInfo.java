@@ -32,7 +32,7 @@ import java.util.ArrayList;
  */
 class ShareTargetInfo {
 
-    private static final String TAG_SHARE_TARGET = "share-target";
+    private static final String TAG_SHARE_TARGET = "share-targets-disabled";
     private static final String ATTR_TARGET_CLASS = "targetClass";
 
     private static final String TAG_DATA = "data";

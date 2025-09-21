@@ -107,7 +107,7 @@ class ShortcutPackage extends ShortcutPackageItem {
     private static final String TAG_INTENT = "intent";
     private static final String TAG_EXTRAS = "extras";
     private static final String TAG_SHORTCUT = "shortcut";
-    private static final String TAG_SHARE_TARGET = "share-target";
+    private static final String TAG_SHARE_TARGET = "share-targets-disabled";
     private static final String TAG_CATEGORIES = "categories";
     private static final String TAG_PERSON = "person";
 

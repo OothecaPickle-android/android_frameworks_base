@@ -56,7 +56,7 @@ public class ShortcutParser {
     private static final String TAG_SHORTCUT = "shortcut";
     private static final String TAG_INTENT = "intent";
     private static final String TAG_CATEGORIES = "categories";
-    private static final String TAG_SHARE_TARGET = "share-target";
+    private static final String TAG_SHARE_TARGET = "share-targets-disabled";
     private static final String TAG_DATA = "data";
     private static final String TAG_CATEGORY = "category";
 
