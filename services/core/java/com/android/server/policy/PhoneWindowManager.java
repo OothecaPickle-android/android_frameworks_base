@@ -645,6 +645,8 @@ public class PhoneWindowManager implements WindowManagerPolicy {
 
     private boolean mHandleVolumeKeysInWM;
 
+    private boolean mLongPressVolumeLocked = true;
+
     // Button wake control flags
     boolean mWakeOnHomeKeyPress;
     boolean mWakeOnMenuKeyPress;
@@ -6045,7 +6047,7 @@ public class PhoneWindowManager implements WindowManagerPolicy {
                         break;
                     }
                 }
-                if (mUseTvRouting || mHandleVolumeKeysInWM) {
+                if (mUseTvRouting || mHandleVolumeKeysInWM || mLongPressVolumeLocked) {
                     // Defer special key handlings to
                     // {@link interceptKeyBeforeDispatching()}.
                     result |= ACTION_PASS_TO_USER;

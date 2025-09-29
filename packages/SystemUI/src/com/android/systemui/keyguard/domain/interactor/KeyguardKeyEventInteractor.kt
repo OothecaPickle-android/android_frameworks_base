@@ -148,7 +148,7 @@ constructor(
     private fun dispatchVolumeKeyEvent(event: KeyEvent): Boolean {
         mediaSessionLegacyHelperWrapper
             .getHelper(context)
-            .sendVolumeKeyEvent(event, AudioManager.USE_DEFAULT_STREAM_TYPE, true)
+            .sendVolumeKeyEvent(event, AudioManager.USE_DEFAULT_STREAM_TYPE, false)
         return true
     }
 

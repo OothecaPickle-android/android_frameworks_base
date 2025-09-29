@@ -13129,7 +13129,8 @@ public class AudioService extends IAudioService.Stub
                 }
 
                 final long now = SystemClock.uptimeMillis();
-                if ((flags & AudioManager.FLAG_SHOW_UI) != 0 && !mVisible) {
+                int displayState = mDisplayManager.getDisplay(Display.DEFAULT_DISPLAY).getState();
+                if ((flags & AudioManager.FLAG_SHOW_UI) != 0 && !mVisible && displayState == Display.STATE_ON) {
                     // UI is not visible yet, adjustment is ignored
                     if (mNextLongPress < now) {
                         mNextLongPress =
