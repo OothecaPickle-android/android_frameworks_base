@@ -673,7 +673,7 @@ public class PhoneWindowManager implements WindowManagerPolicy {
 
     private boolean mHandleVolumeKeysInWM;
 
-    private boolean mLongPressVolumeLocked = true;
+    private boolean mLongPressVolumeScreenOff = true;
 
     // Button wake control flags
     boolean mWakeOnHomeKeyPress;
@@ -6044,15 +6044,13 @@ public class PhoneWindowManager implements WindowManagerPolicy {
                         break;
                     }
                 }
-                if (mUseTvRouting || mHandleVolumeKeysInWM || mLongPressVolumeLocked) {
+                if (mLineageButtons.handleVolumeKey(event, interactive)) {
+                        break;
+                } else if (mUseTvRouting || mHandleVolumeKeysInWM || mLongPressVolumeScreenOff) {
                     // Defer special key handlings to
                     // {@link interceptKeyBeforeDispatching()}.
                     result |= ACTION_PASS_TO_USER;
                 } else if ((result & ACTION_PASS_TO_USER) == 0 && !mWakeOnVolumeKeyPress) {
-                    if (mLineageButtons.handleVolumeKey(event, interactive)) {
-                        break;
-                    }
-
                     // If we aren't passing to the user and no one else
                     // handled it send it to the session manager to
                     // figure out.
