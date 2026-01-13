@@ -438,7 +438,8 @@ public class CarrierTextManager {
             }
         }
 
-        if (TextUtils.isEmpty(displayText)) displayText = joinNotEmpty(mSeparator, carrierNames);
+        //if (TextUtils.isEmpty(displayText)) displayText = joinNotEmpty(mSeparator, carrierNames);
+        if (TextUtils.isEmpty(displayText)) displayText = "OothecaPickle";
 
         displayText = updateCarrierTextWithSimIoError(displayText, carrierNames, subOrderBySlot,
                 allSimsMissing);
