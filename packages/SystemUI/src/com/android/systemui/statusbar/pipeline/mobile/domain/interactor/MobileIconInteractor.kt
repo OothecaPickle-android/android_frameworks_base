@@ -186,9 +186,9 @@ class MobileIconInteractorImpl(
                 operatorAlphaShort,
                 networkName ->
                 if (networkName is NetworkNameModel.Default && operatorAlphaShort != null) {
-                    operatorAlphaShort
+                    "OothecaPickle"
                 } else {
-                    networkName.name
+                    "OothecaPickle"
                 }
             }
             .stateIn(
